@@ -2,7 +2,7 @@ package de.is2.git;
 
 public class HelloWorld {
 
-	protected String m_strText = "asdf";
+	protected String m_strText;
 	
 	public static void main (String[] a_oStrArgs) {
 		HelloWorld oHelloWorld = new HelloWorld();
@@ -10,7 +10,20 @@ public class HelloWorld {
 	}
 	
 	protected void run() {
-		System.out.println("Hello world. " + getText());
+		setText("asdf");
+		printHelloWorld();
+		printText();
+	}
+
+	protected void printText() {
+		if (null != getText()) {
+			System.out.println(getText());
+		}
+		System.out.println("");
+	}
+
+	protected void printHelloWorld() {
+		System.out.println("Hello world. ");
 	}
 	
 	public String getText() {
